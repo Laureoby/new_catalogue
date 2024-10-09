@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Galery page</title>
+</head>
+<body>
+    <div class="center">
+        <video autoplay muted loop id="bck_video">
+            <source src="../animed_slider/assets/animated_background.mp4" type="video/mp4">
+            Ton navigateur ne supporte pas la balise vidéo.
+      </video>
+        <div class="top">
+            <p>Découvrez ce que nous sommes capables de faire pour vous à</p>
+             <h1>ETS DIBI-TECH</h1>
+        </div>
+        <div class="carousel">
+            <div class="left">
+                <div class="left-item">
+                    <div class="title">Certificate</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">Attestation</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">Carte de visite</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">Flyer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">flyer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">Flyer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                 <div class="left-item">
+                    <div class="title">Flyer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+                <div class="left-item">
+                    <div class="title">Flyer</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Nihil temporibus quo eaque iure aliquid asperiores doloribus delectus, 
+                    soluta similique obcaecati eveniet ratione expedita illo ab sit nulla consequatur, 
+                    aspernatur reprehenderit!</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="item active">
+                    <img src="../animed_slider//assets/attestation.jpg" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/certificate.png" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/day_yekov.jpg" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/Dibi-tech_flyer.png" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/garderie.png" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/panel2.jpg" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/WTM.jpg" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+                <div class="item">
+                    <img src="../animed_slider//assets/speaker.jpg" alt="#">
+                    <button type="button">Contactez-nous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* let items = document.querySelectorAll(".item");
+        let carousel = document.querySelector(".carousel");
+
+        document.addEventListener("scroll", () => {
+            let proportion = carousel.getBoundingClientRect().top / window.innerHeight;
+            let index = Math.ceil(-1 * (proportion + 0.5));
+
+            // Limite l'index aux limites de la liste des items
+            index = Math.max(0, Math.min(items.length - 1, index));
+
+            items.forEach((item, i) => {
+                item.className = "item"; // Reset class name
+                if (i === index) {
+                   item.className = "item active"; // Add active class if index matches
+                }
+            });
+        }); */
+        let items = document.querySelectorAll(".item");
+        let carousel = document.querySelector(".carousel");
+
+        // Fonction pour calculer l'index de l'item à afficher en fonction du défilement
+        function updateActiveItem() {
+            let proportion = carousel.getBoundingClientRect().top / window.innerHeight;
+            let index = Math.ceil(-1 * (proportion + 0.5));
+
+            // Limite l'index aux limites de la liste des items
+            index = Math.max(0, Math.min(items.length - 1, index));
+
+            items.forEach((item, i) => {
+                item.className = "item"; // Reset class name
+                if (i === index) {
+                    item.className = "item active"; // Add active class if index matches
+                }
+            });
+        }
+
+        // Ajout d'un écouteur pour le scroll pour activer les items au défilement
+        document.addEventListener("scroll", updateActiveItem);
+
+        // Si nécessaire, ajouter une écoute des changements de la taille de l'écran
+        window.addEventListener("resize", () => {
+            // Recalculer l'élément actif au redimensionnement
+            updateActiveItem();
+        });
+    </script>
+</body>
+</html>
